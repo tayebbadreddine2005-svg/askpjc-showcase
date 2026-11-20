@@ -4,4 +4,4 @@ Project page for **Ask PJC**, the AI student help assistant built by **Tayeb Bad
 
 Live page: https://tayebbadreddine2005-svg.github.io/askpjc-showcase/
 
-This repository holds only the public showcase: the page and the demo video. The portal screens are demo mockups with no student data.
+This repository holds only the public showcase: the page, the demo video and screenshots. The portal screens are demo mockups with no student data.
