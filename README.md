@@ -1,2 +1,7 @@
-# askpjc-showcase
-Ask PJC: AI student help assistant for Paris Junior College. Demo video and project story by Tayeb Badr Eddine, AI Engineer.
+# Ask PJC · Showcase
+
+Project page for **Ask PJC**, the AI student help assistant built by **Tayeb Badr Eddine** (AI Engineer, Paris Junior College IT).
+
+Live page: https://tayebbadreddine2005-svg.github.io/askpjc-showcase/
+
+This repository holds only the public showcase: the page and the demo video. The portal screens are demo mockups with no student data.

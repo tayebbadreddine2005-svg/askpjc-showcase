@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask PJC · Tayeb Badr Eddine</title>
+<meta name="description" content="Ask PJC: an AI assistant that answers Paris Junior College students' questions 24/7 from official sources. Built by Tayeb Badr Eddine, AI Engineer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#064429;--deep:#032918;--gold:#FFC72C;--cream:#F2E9DC;--ink:#0E0E0E;--muted:#3A3A3A;--card:#FFFFFF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background-color:var(--cream);background-image:radial-gradient(rgba(70,50,20,.06) 1px,transparent 1px),radial-gradient(rgba(70,50,20,.04) 1px,transparent 1px);background-size:6px 6px,9px 9px;background-position:0 0,2px 4px;color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.55}
+a{color:var(--green);font-weight:600}
+a:hover{color:var(--deep)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;flex-wrap:wrap}
+nav .brand{display:flex;align-items:center;gap:10px;font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:20px;color:var(--green);text-decoration:none}
+nav .links{display:flex;gap:18px;flex-wrap:wrap}
+nav .links a{text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+.kicker{font-family:Archivo,Arial,sans-serif;font-weight:800;letter-spacing:1px;color:var(--green);font-size:15px;text-transform:uppercase;margin:0 0 14px}
+h1,h2{font-family:Archivo,Arial,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:-.03em;line-height:.92;margin:0}
+h1{font-size:clamp(52px,9vw,116px)}
+h2{font-size:clamp(36px,5.5vw,64px);margin-bottom:22px}
+.lead{font-size:clamp(18px,2vw,22px);color:var(--muted);max-width:720px;margin:24px 0 0}
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center;padding:48px 0 72px}
+.hero video{width:100%;border-radius:16px;box-shadow:0 2px 4px rgba(0,0,0,.06),0 30px 60px rgba(40,30,10,.2);background:#000;display:block}
+.by{margin-top:28px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.by b{font-family:Archivo,Arial,sans-serif;font-size:20px;color:var(--green)}
+.by span{padding-left:14px;border-left:4px solid var(--gold);color:var(--muted);font-weight:600}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;border-radius:10px;text-decoration:none;font-weight:700}
+.btn.primary{background:var(--green);color:#fff}
+.btn.primary:hover{background:var(--deep);color:#fff}
+.btn.ghost{border:2px solid var(--green);color:var(--green)}
+section{padding:72px 0;border-top:2px solid rgba(6,68,41,.12)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.stat{background:var(--green);border-radius:8px;padding:26px 22px;box-shadow:inset -10px -10px 0 var(--deep),0 24px 40px rgba(6,68,41,.2);color:#fff}
+.stat b{display:block;font-family:Archivo,Arial,sans-serif;font-size:clamp(36px,4.6vw,54px);color:var(--gold);line-height:1;letter-spacing:-.02em}
+.stat span{display:block;margin-top:10px;font-size:16px}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.step{background:var(--card);border-radius:14px;padding:24px;box-shadow:0 14px 30px rgba(60,45,20,.08)}
+.step .n{font-family:Archivo,Arial,sans-serif;font-weight:900;color:var(--green);font-size:15px;letter-spacing:1px}
+.step h3{margin:8px 0 6px;font-size:20px}
+.step p{margin:0;color:var(--muted);font-size:16px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl{display:grid;grid-template-columns:150px 28px minmax(0,1fr);gap:18px}
+.tl .d{font-weight:700;color:var(--green);padding-top:2px}
+.tl .rail{display:flex;flex-direction:column;align-items:center}
+.tl .dot{width:20px;height:20px;border-radius:10px;background:var(--green);border:4px solid var(--gold);flex-shrink:0}
+.tl .line{width:3px;flex-grow:1;background:rgba(6,68,41,.2)}
+.tl .body{padding-bottom:28px}
+.tl h3{margin:0 0 4px;font-size:21px}
+.tl p{margin:0;color:var(--muted)}
+.list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.list li{background:var(--card);border-radius:12px;padding:18px 20px;box-shadow:0 10px 24px rgba(60,45,20,.07);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{background:var(--card);border:2px solid rgba(6,68,41,.2);border-radius:20px;padding:8px 14px;font-weight:600;color:var(--green)}
+.quote{font-family:Archivo,Arial,sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(30px,4.5vw,52px);line-height:.98;letter-spacing:-.02em;color:var(--green);margin:0}
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px}
+footer{padding:40px 0 56px;border-top:2px solid rgba(6,68,41,.12);color:var(--muted);font-size:15px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){
+  .hero,.split,.about{grid-template-columns:minmax(0,1fr)}
+  .stats,.steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .list{grid-template-columns:minmax(0,1fr)}
+  .tl{grid-template-columns:96px 24px minmax(0,1fr);gap:12px}
+}
+@media (max-width:480px){.stats,.steps{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="brand" href="#top">Ask PJC</a>
+    <div class="links"><a href="#how">How it works</a><a href="#build">The build</a><a href="#lessons">Lessons</a><a href="#about">About me</a></div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <p class="kicker">AI case study · Paris Junior College</p>
+      <h1>Ask once. Get the answer.</h1>
+      <p class="lead">Ask PJC is an AI assistant inside the MyPJC student portal. It answers student questions 24/7 from official college sources, cites them, and only shares verified links.</p>
+      <div class="by"><b>Tayeb Badr Eddine</b><span>AI Engineer, PJC IT</span></div>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/tayebbadreddine2005-svg">My GitHub</a>
+        <a class="btn ghost" href="#how">How it works</a>
+      </div>
+    </div>
+    <video src="askpjc-demo.mp4" poster="poster.jpg" controls playsinline muted loop aria-label="Demo: a student clicks through MyPJC tabs, opens Ask PJC and gets sourced answers"></video>
+  </header>
+
+  <section aria-labelledby="numbers">
+    <p class="kicker" id="numbers">By the numbers</p>
+    <div class="stats">
+      <div class="stat"><b>21,000+</b><span>test questions run on our own AI server</span></div>
+      <div class="stat"><b>24/7</b><span>answers inside the MyPJC student portal</span></div>
+      <div class="stat"><b>LIVE</b><span>college calendar, so deadlines update themselves</span></div>
+      <div class="stat"><b>100%</b><span>of links checked against official sources</span></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <p class="kicker">How it works</p>
+    <h2>Retrieval first. Then the answer.</h2>
+    <div class="steps">
+      <div class="step"><span class="n">01 · ASK</span><h3>Student asks</h3><p>From the chat panel in the MyPJC portal, any time of day.</p></div>
+      <div class="step"><span class="n">02 · FIND</span><h3>Search official sources</h3><p>Department categories route the question to the right official pages and documents, plus the live college calendar for dates.</p></div>
+      <div class="step"><span class="n">03 · ANSWER</span><h3>AI writes from sources</h3><p>Claude Haiku or a local Qwen model answers only from what was found, with sources.</p></div>
+      <div class="step"><span class="n">04 · CHECK</span><h3>Safety checks</h3><p>Crisis help comes first. Links not found in official sources are removed.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="split">
+      <div>
+        <p class="kicker">Inside the portal</p>
+        <h2>Answers with sources.</h2>
+        <p class="lead" style="margin-top:0">Deadlines come straight from the college's live calendar feed, so dates like the last day to drop with a W update on their own each year. Every answer shows where it came from.</p>
+      </div>
+      <ul class="list" style="grid-template-columns:minmax(0,1fr)">
+        <li>Hundreds of college web pages and official documents, organized by department</li>
+        <li>Office-confirmed answers take priority over older pages</li>
+        <li>Crisis questions get emergency resources first</li>
+        <li>Chat logs keep no passwords or personal data</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="build">
+    <p class="kicker">The build</p>
+    <h2>About two months.</h2>
+    <div class="timeline">
+      <div class="tl"><div class="d">Phase 1</div><div class="rail"><div class="dot"></div><div class="line"></div></div><div class="body"><h3>Build the core</h3><p>RAG app in Python (FastAPI and BM25 search) with Claude Haiku, embedded in the MyPJC portal. Crisis detection, link allowlist, rate limits, privacy-safe logs and a staff review page.</p></div></div>
+      <div class="tl"><div class="d">Phase 2</div><div class="rail"><div class="dot"></div><div class="line"></div></div><div class="body"><h3>Build the knowledge base</h3><p>Read every college web page and document. Departments confirmed answers. Organized everything by department and added the live calendar feed.</p></div></div>
+      <div class="tl"><div class="d">Phase 3</div><div class="rail"><div class="dot"></div><div class="line"></div></div><div class="body"><h3>Set up our own AI server</h3><p>NVIDIA GB10 machine running open-source Qwen models with llama.cpp, so student questions can stay on college hardware.</p></div></div>
+      <div class="tl"><div class="d">Phase 4</div><div class="rail"><div class="dot"></div></div><div class="body"><h3>Test at scale</h3><p>21,000+ test questions across Claude Haiku and open-source Qwen models to compare accuracy, speed and cost before choosing what students see.</p></div></div>
+    </div>
+  </section>
+
+  <section id="lessons">
+    <p class="kicker">Lessons</p>
+    <p class="quote">Good data. Good answers.</p>
+    <p class="lead">The model matters. Checking every fact with the people who own it matters more.</p>
+    <ul class="list" style="margin-top:32px">
+      <li>Office-confirmed answers always win over older pages</li>
+      <li>Organize content by department before scaling up</li>
+      <li>Test thousands of real questions before trusting a model</li>
+      <li>Never let the AI invent a link or a date</li>
+    </ul>
+  </section>
+
+  <section>
+    <p class="kicker">Tech stack</p>
+    <div class="tags"><span>Python</span><span>FastAPI</span><span>BM25 retrieval</span><span>Anthropic Claude API</span><span>Claude Haiku</span><span>llama.cpp</span><span>Qwen</span><span>NVIDIA GB10</span><span>Azure App Service</span><span>Linux</span><span>pytest</span></div>
+  </section>
+
+  <section id="about">
+    <div class="about">
+      <div>
+        <p class="kicker">About me</p>
+        <h2>Tayeb Badr Eddine</h2>
+        <p style="font-weight:700;color:var(--green);margin:0">AI Engineer · Paris Junior College IT</p>
+      </div>
+      <div>
+        <p class="lead" style="margin-top:0">I build practical AI systems that help students get accurate answers, fast. My work covers retrieval-augmented generation, running and evaluating open-source models on local hardware, and the safety checks that make AI trustworthy in education.</p>
+        <div class="btns"><a class="btn primary" href="https://github.com/tayebbadreddine2005-svg">GitHub</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><span>© 2026 Tayeb Badr Eddine</span><span>Ask PJC was built for Paris Junior College students. Portal screens shown are demo mockups with no student data.</span></footer>
+</div>
+</body>
+</html>
